@@ -6,10 +6,10 @@ import { Provider, connect } from 'react-redux'
 
 class CounterRR extends Component {
     render() {
-        const { value, onIncreaseClick,onDecreaseClick } = this.props
+        const { count, onIncreaseClick,onDecreaseClick } = this.props
         return (
             <div>
-                <span>当前数值:{value}</span>
+                <span>当前数值:{count}</span>
                 <button onClick={onIncreaseClick}>Increase</button>
                 <button onClick={onDecreaseClick}>Increase</button>
             </div>
@@ -40,7 +40,7 @@ const store = createStore(counter)
 // Map Redux state to component props
 function mapStateToProps(state) {
     return {
-        value: state.count
+        count: state.count
     }
 }
 
