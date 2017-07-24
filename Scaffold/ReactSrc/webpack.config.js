@@ -14,8 +14,8 @@ module.exports = {
         hot: true,
         // 开启服务器的模块热替换（HMR）
         /* 自定义端口 */
-        // host: 'localhost',
-        // port: '3011',
+        host: 'localhost',
+        port: '6060',
         /* 前端跨域 */
         // proxy: {
         //     '/': {

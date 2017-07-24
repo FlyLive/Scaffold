@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider, connect } from 'react-redux'
+import counter from '../../reducers/CounterR'
 
 
 class CounterRR extends Component {
@@ -17,22 +18,9 @@ class CounterRR extends Component {
     }
 }
 
-const increaseAction = { type: 'increase' }
+const increaseAction = { type: 'INCREMENT' }
 
-const decreaseAction = { type: 'decrease' }
-
-// Reducer
-function counter(state = { count: 0 }, action) {
-    const count = state.count
-    switch (action.type) {
-        case 'increase':
-            return { count: count + 1 }
-        case 'decrease':
-            return { count: count - 1 }
-        default:
-            return state
-    }
-}
+const decreaseAction = { type: 'DECREMENT' }
 
 // Store
 const store = createStore(counter)
